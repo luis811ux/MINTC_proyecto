@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+  <form>
+  <label for="numInicial">Ingrese el numero desde el que quiere sumar los numeros pares: </label>
+  <input type="number" id="numInicial" placeholder="Un numero" required>
+  <br><br>
+  <label for="numFinal">Ingrese el numero hasta el que quiere sumar los numeros pares: </label>
+  <input type="number" id="numFinal" placeholder="Otro numero" required>
+  <br><br>
+  <input type="button" onclick="numPares()" value="Sumar">
+  <br><br>
+  <p id="resultado"></p>
+  
+  
+  <p id="sumatoria"></p>
+  <br><br>
+
+  <button type="button"  onclick ="regresar()"> Regresar </button>
+
+  </form>
+
+  
+
+  <script>
+    function numPares() {
+      
+      let numI=Math.round(document.getElementById("numInicial").value);
+      let numF=Math.round(document.getElementById("numFinal").value);
+      let suma=0
+      
+      
+      
+      tabla=`<table id="tablaN"  border="1"> <tr><th>Numeros Pares</th></tr>`
+      for (let i = numI; i <= numF; i++) {
+        
+        if (i%2===0) {
+
+          tabla += `<tr><td>${i}</td></tr>`;
+        
+          suma+=i;
+
+      }
+      
+  
+        else {
+
+          
+        
+      }
+      
+
+      } 
+      tabla += `</table>`;
+      
+      document.getElementById("resultado").innerHTML= tabla;
+     
+      document.getElementById("sumatoria").innerHTML= `La suma de estos numeros pares es: ${suma}`;
+     
+      
+
+    }
+
+    function regresar() {
+      window.location.href="../../index.html"}
+    
+
+
+    
+  </script>
+  
+
+    
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Numeros Primos</h2>
+    <form>
+      <label for="numeroFinal">Ingrese el numero donde terminará la serie de números primos: </label>
+      <input type="number" id="numeroFinal" placeholder="Numero positivo"  required>
+      <br><br>
+  
+      <input type="button" onclick="primos()" value="Numeros Primos">
+      <br><br>
+  
+      <p id="resultado"></p>
+      <br><br>
+  
+          <button type="button"  onclick ="regresar()"> Regresar </button>
+      </form>
+    <script>
+
+      function primos() {
+
+        let numFinal= Math.round(document.getElementById("numeroFinal").value);
+
+        tabla=`<table id= "tablaP" border="1"><tr><th>Numeros Primos</th></tr>`;
+        for (let numEva = 2; numEva <= numFinal; numEva++) {
+          let div=2
+          i=0
+        
+
+          while (numEva>=div) {
+          if (numEva%div===0) {
+            i++
+          } 
+          
+          else {
+            
+          }
+          div+=1
+
+          
+        }
+          if (i===1) {
+            tabla += `<tr><td>${numEva}</td></tr>`;
+            
+          } 
+          else {
+            
+          }
+        
+        }
+        tabla += `</table>`;
+        document.getElementById("resultado").innerHTML= tabla
+      }
+
+      function regresar() {
+        window.location.href="../../index.html"
+        
+      }
+        
+        
+   
+    </script>
+</body>
+</html>

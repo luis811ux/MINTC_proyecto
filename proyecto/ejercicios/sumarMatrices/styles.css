@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  }
+  #contenedor {
+  width: 100%;
+  border: 1px solid #000;
+  line-height: 130%;
+  background-color: #f2f2f2;
+  overflow: hidden; /* Asegura que el contenedor envuelva las columnas flotantes */
+  }
+  #cabecera {
+  padding: 10px;
+  color: #fff;
+  background-color: #becdfe;
+  clear: left;
+  }
+  #columna1, #columna2, #columna3 {
+  float: left; /* Asegura que estas columnas se alineen correctamente */
+  width: 30%; /* Ancho de cada columna */
+  margin: 0;
+  padding: 1rem;
+  }
+  #columna2 {
+  border-left: 1px solid #aaa; /* Borde a la izquierda */
+  }
+  #columna3 {
+  border-left: 1px solid #aaa; /* Se añade un borde a la izquierda para separación */
+  }
+  #pie {
+  padding: 10px;
+  color: #fff;
+  background-color: #becdfe;
+  clear: left;
+  }
+
+  #resultadoX table {
+    border-collapse: collapse; /* Evita bordes dobles */
+    width: 30%; /* O el tamaño que desees */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+
+    #resultadoX td {
+      text-align: center;
+    }
+
+    #resultadoY table {
+      border-collapse: collapse; /* Evita bordes dobles */
+      width: 30%; /* O el tamaño que desees */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+
+      #resultadoY td {
+        text-align: center;
+      }
+
+      #resultadoZ table {
+        border-collapse: collapse; /* Evita bordes dobles */
+        width: 30%; /* O el tamaño que desees */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+
+        #resultadoZ td {
+          text-align: center;
+        }
+
+        #resultadoZ2 table {
+          border-collapse: collapse; /* Evita bordes dobles */
+          width: 30%; /* O el tamaño que desees */
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+
+          #resultadoZ2 td {
+            text-align: center;
+          }
+
+  #button{
+    padding: 5px;
+    background-color: #becdfe;
+  }
+
+  #matrizX td {
+
+    td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center; /* Centrar texto */
+      background-color: #aaa;
+  }
+
+  }
+
+
+

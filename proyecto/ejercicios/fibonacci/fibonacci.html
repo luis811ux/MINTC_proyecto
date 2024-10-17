@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Serie de FIBONACCI</h1>
+  <form>
+    <label for="numeroFinal">Ingrese el numero donde terminará la serie de Fibonacci: </label>
+    <input type="number" id="numeroFinal" placeholder="Numero positivo"  required>
+    <br><br>
+
+    <input type="button" onclick="sumar()" value="Numeros Fibonacci">
+    <br><br>
+
+    <p id="resultado"></p>
+    <br><br>
+
+        <button type="button"  onclick ="regresar()"> Regresar </button>
+    </form>
+    <script>
+        let suma=0;        
+        num1=0;
+        num2=1;
+        tabla=0;      
+
+        function sumar() {
+
+          let numFinal = Math.round(document.getElementById("numeroFinal").value);
+          
+
+          tabla=`<table id= "tablaF" border="1"><tr><th>Numeros Fibonacci</th></tr><tr><td>${num1}</td></tr><tr><td>${num2}</td></tr>`;
+
+          while (suma < numFinal) 
+        {
+            
+            suma=num1+num2
+            tabla += `<tr><td>${suma}</td></tr>`;
+            num1=num2
+            num2=suma
+            
+           
+        }
+
+        tabla += `</table>`;
+
+
+      document.getElementById("resultado").innerHTML= tabla
+          
+          
+        }
+
+        function regresar() {
+        window.location.href="../../index.html"
+        
+      }
+
+        
+        
+
+
+
+
+    </script>
+</body>
+</html>

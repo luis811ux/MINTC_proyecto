@@ -1,0 +1,142 @@
+*{
+  margin: 0;
+}
+
+html, body{
+  height: 100%;
+  margin: 0;
+  background-color: antiquewhite;
+  text-align: center;
+}
+
+.contenedor{
+  display: grid;
+  grid-template-columns: 25% 25% 25% auto;
+  background-color: lightcoral;
+  border: 2px solid black;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: 15% 15% 30% 30% auto;
+ 
+
+  
+}
+
+.caja{
+
+  border: 2px solid black;
+  text-align: center;
+  padding: 20px;
+  
+
+}
+
+.cabecera{
+  grid-column: 1/span 4;
+  background-color: lightblue;
+}
+
+.menu{
+  grid-column: 1/span 4;
+  background-color: lightgreen;
+}
+
+/* .contenido{
+  grid-column: 1/span 3;
+  grid-row: 3/span 4;
+  background-color: lightgoldenrodyellow;
+} */
+
+.cont1{
+  
+  /* grid-column: 1/span 1;
+  grid-row: 3/span 3; */
+  background-color: lightgoldenrodyellow;
+  
+}
+.cont2{
+  
+  /* grid-column: 1/span 1;
+  grid-row: 3/span 3; */
+  background-color: lightgoldenrodyellow;
+}
+.cont3{
+  
+  /* grid-column: 1/span 1;
+  grid-row: 3/span 3; */
+  background-color: lightgoldenrodyellow;
+}
+.cont4{
+  
+  /* grid-column: 1/span 1;
+  grid-row: 3/span 3; */
+  background-color: lightgoldenrodyellow;
+}
+.cont5{
+  
+  /* grid-column: 1/span 1;
+  grid-row: 3/span 3; */
+  background-color: lightgoldenrodyellow;
+}
+.cont6{
+  
+  /* grid-column: 1/span 1;
+  grid-row: 3/span 3; */
+  background-color: lightgoldenrodyellow;
+}
+
+.lista{
+  background-color: lightpink;
+  grid-row: 3/span 4;
+}
+
+.footer{
+  grid-column: 1/span 4;
+  background-color: lightgrey;
+}
+
+#videoLink img {
+  
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+  transition: transform 0.3s; /* Efecto de transición */
+  max-width: 100%; /* Hace que la imagen sea responsiva */
+  max-height: 100%; /* Hace que la imagen sea responsiva */
+}
+#videoLink img:hover {
+  transform: scale(1.05); /* Efecto al pasar el ratón */
+}
+
+body a{
+  text-decoration: none;
+
+
+}
+
+.icon {
+  /* font-size: 40px; */
+  transition: transform 0.3s ease;}
+
+.icon :hover {
+    transform: scale(2); /* Aumenta el tamaño al pasar el cursor */
+}
+
+.icon :active {
+  transform: rotate(180deg); /* Rota el ícono al hacer clic */
+}
+
+.tabla{
+
+  width: 100%; /* Hacer que la tabla ocupe el 100% del ancho disponible */
+    border-collapse: collapse; /* Eliminar espacios entre celdas */
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+footer a {
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+}

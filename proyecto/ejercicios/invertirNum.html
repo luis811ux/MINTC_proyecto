@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Invertir los numeros y sumarlos</h1>
+
+    <form>
+      <label for="numero1">Ingrese el primer numero que desee invertir: </label>
+      <input type="number" id="numero1" placeholder="primer numero"  required>
+      <br><br>
+      <!-- <label for="numero2">Ingrese el segundo numero que desee invertir: </label>
+      <input type="number" id="numero2" placeholder="segundo numero"  required>
+      <br><br>
+      <label for="numero3">Ingrese el tercer numero que desee invertir: </label>
+      <input type="number" id="numero3" placeholder="tercer numero"  required>
+      <br><br> -->
+  
+      <input type="button" onclick="invertir()" value="Invertir y Sumar Numeros">
+      <br><br>
+  
+      <p id="resultado"></p>
+      <br><br>
+  
+          <!-- <button type="button"  onclick ="regresar()"> Regresar </button> -->
+      </form>
+
+
+    
+
+
+    <script>
+      function invertir() {
+
+        numero1=Math.round(document.getElementById("numero1").value);
+        // numero2=Math.round(document.getElementById("numero2").value);
+        // numero3=Math.round(document.getElementById("numero3").value);
+
+        
+
+        division=numero1;
+
+        invertido1=(invertir(division));    
+       
+
+        sumas1=(suma(numero1, invertido1));
+        
+
+        tabla=`<table id= "tablaP" border="1"><tr><th>Numeros Ingresados</th><th>Numeros Invertidos</th><th>Numeros Sumados</th></tr>`;
+          for (let i = 1; i <= 1; i++) {
+            tabla += `<tr><td>${numero1}</td><td>${invertido1}</td><td>${sumas1}</td></tr>`;
+            
+            
+          }
+          tabla += `</table>`;
+        document.getElementById("resultado").innerHTML= tabla
+
+
+        function invertir(division)
+        {
+        let modulo=0;
+        let numeroInvertido=0;
+       
+        while (division!=0)
+       {
+        modulo=division%10;
+        division=Math.floor(division/10);
+        numeroInvertido=(numeroInvertido*10)+modulo;
+       
+       }
+       return numeroInvertido;
+
+    }
+
+
+   
+
+
+function suma(numero,invertido)
+{
+    let resultado;
+    resultado=numero+invertido;
+   return resultado;
+}
+
+
+        
+      }
+        
+       
+      
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+     

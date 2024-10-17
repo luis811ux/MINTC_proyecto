@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verificar Claves</title>
+<style>
+body {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 50px;
+}
+h2 {
+font-size: 2rem;
+}
+button {
+margin-top: 20px;
+padding: 10px 20px;
+font-size: 1rem;
+}
+</style>
+</head>
+
+<body>
+
+  <h2>Verificar Claves</h2>
+
+    <form>
+        <label for="clave1">Ingrese su clave:</label>
+        <input type="password" id="clave1">
+        <br><br>
+        <label for="clave2">Repita su clave:</label>
+        <input type="password" id="clave2">
+        <br><br>
+        <button type="button"  onClick="verificar()">Verificar clave</button>
+        <br><br>
+        <button type="button"  onclick ="regresar()"> Regresar </button>
+    </form>
+
+    <p id="demo"></p>
+
+    <script>
+        function verificar() {
+            let clave1 = document.getElementById('clave1').value;
+            let clave2 = document.getElementById('clave2').value;
+            if (clave1 == clave2) {
+                document.getElementById("demo").innerHTML =   ' claves iguales ';
+            } else {
+                document.getElementById("demo").innerHTML =   ' claves diferentes ';
+            }
+        }
+
+        function regresar() {
+        window.location.href="../../index.html"
+        
+      }
+
+    </script>
+
+</body>
+
+</html>

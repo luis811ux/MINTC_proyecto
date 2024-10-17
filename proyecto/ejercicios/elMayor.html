@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mayor Menor o Igual</h1>
+
+    <form>
+
+      <label for="valor1">Ingrese el primer número:</label>
+      <input type="number" id="valor1" placeholder="Numero 1" required>
+      <br><br>
+      <label for="valor2">Ingrese el segundo número:</label>
+      <input type="number" id="valor2" placeholder="Numero 2" required>
+      <br><br>
+      <input type="button"  onclick ="mayor()" value="Respuesta:">
+      <br><br>
+      <p id="resultado"></p>
+      <br><br>
+      <button type="button"  onclick ="regresar()"> Regresar </button>
+      
+
+
+
+  </form>
+
+
+  <script>
+
+
+      function mayor (){
+
+        const  num1 = parseFloat(document.getElementById ("valor1").value);
+        const  num2 = parseFloat(document.getElementById  ("valor2").value);
+
+    if (num1>num2){
+      document.getElementById("resultado").innerHTML= `${num1} es mayor que ${num2} `
+    }
+    
+    else if (num1<num2) {
+      
+      document.getElementById("resultado").innerHTML= `${num2} es mayor que ${num1} `
+
+    }
+      
+
+    else{
+      document.getElementById("resultado").innerHTML= `${num1} es igual que ${num2} `
+    }
+
+      }
+
+      function regresar() {
+        window.location.href="../index.html"
+        
+      }
+  </script>
+
+</body>
+
+</html>

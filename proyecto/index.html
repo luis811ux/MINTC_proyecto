@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>MATH</title>
+</head>
+<body>
+<div class="contenedor">
+  <div class="caja cabecera"><h3>APRENDE A PROGRAMAR CON HTML, CSS Y JAVASCRIPT</h3></div>
+  
+
+  <div class="caja menu">
+<table class="tabla">
+  <tr>
+    <th> 
+      <label for="selector1">Donde estudiar:</label><br>
+      <select id="selector1" onchange="redirigir(event)">
+          <option value="">Seleccione una opción</option>
+          <option value="https://talentotech.gov.co/portal/">Talentotech</option>
+          <option value="https://www.freecodecamp.org/">FreeCodeCamp</option>
+          <option value="https://www.codecademy.com/">Codecademy</option>  
+          <option value="https://www.w3schools.com/">W3schools</option> 
+          <option value="https://developers.google.com/learn?hl=es-419">Google for developers</option> 
+          
+
+      </select> 
+     </th>
+
+    <th>
+      <label for="selector2">Empleo:</label><br>
+      <select id="selector2" onchange="redirigir(event)">
+        <option value="">Seleccione una opción</option>
+        <option value="https://www.linkedin.com/jobs/">Linkedin</option> 
+        <option value="https://co.indeed.com/?r=us">Indeed</option>
+        <option value="https://www.glassdoor.com/index.htm">Glassdoor</option>
+        <option value="https://stackoverflow.com/jobs">Stackoverflow</option>
+        <option value="https://www.simplyhired.com/">Simplyhired</option>
+        
+
+    </select>
+    </th>
+
+
+    <th>
+      <label for="selector3">Youtubers:</label><br>
+      <select id="selector3" onchange="redirigir(event)">
+        <option value="">Seleccione una opción</option>
+        <option value="https://www.youtube.com/@jonmircha">Jonmircha</option>
+        <option value="https://www.youtube.com/@DorianDesings">Dorian Desings</option>
+        <option value="https://www.youtube.com/@TodoCode">TodoCode</option>
+        <option value="https://www.youtube.com/@VictorRoblesWEB">Victor Robles WEB</option>
+        <option value="https://www.youtube.com/@midudev">Midudev</option>
+
+    </select>
+    </th>
+  </tr>
+</table>
+
+  </div>
+   
+  
+  <!-- <div class="caja contenido1">video</div> -->
+
+  <a id="videoLink" class=" caja cont1" href="https://www.youtube.com/watch?v=a8SJJPvkGIE&list=PLQxX2eiEaqbwnzKnmqHDl0rkRvp_T7Q_W&index=4&ab_channel=TodoCode" target="_blank">
+    <img src="imagenes/variables.jpg" alt="matrices" />Variables</a>
+
+
+      <a id="videoLink" class=" caja cont4"  href="https://www.youtube.com/watch?v=AapgtR0Rwk0&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=16&ab_channel=jonmircha" target="_blank">
+          <img src="imagenes/loops.png" alt="matrices " /><br>Loops</a>
+    
+      <a id="videoLink" class=" caja cont5"  href="https://www.youtube.com/watch?v=aYdvt6myUkc&ab_channel=TodoCode" target="_blank">
+            <img src="imagenes/funcion.jpg" alt="matrices" />Funciones</a>
+    
+            
+      <a id="videoLink" class=" caja cont6"  href="https://www.youtube.com/watch?v=Kgl6XMs_CR8&ab_channel=TodoCode" target="_blank">
+              <img src="imagenes/matrices.jpg" alt="matrices" />Matrices</a>
+
+    <a id="videoLink" class=" caja cont3"  href="https://www.youtube.com/watch?v=Dxd1VRmrq_M&ab_channel=Garajedeideas%7CTech" target="_blank">
+                <img src="imagenes/DOM.jpg" alt="matrices" /><br>DOM</a>
+
+
+   <a id="videoLink" class=" caja cont2" href="https://www.youtube.com/watch?v=lD_nuVM_pqg&ab_channel=INFORMATICONFIG" target="_blank">
+    <img src="imagenes/asincronia.jpg" alt="matrices" />Asincronia</a>
+    
+
+
+
+
+  
+
+  
+  <div class="caja lista">
+  
+    <label for="miSelect"><strong>Ejercios de Programación:</strong></label>
+<select id="miSelect" onchange="redirigir(event)">
+    <option value="">Seleccione una opción</option>
+    <option value="ejercicios/elMayor.html">El número mayor</option>
+    <option value="ejercicios/sumarMatrices/sumarMatrices.html">Sumar y restar matrices cuadradas</option>
+    <option value="ejercicios/invertirArreglo.html">Invertir arreglo de números</option>
+    <option value="ejercicios/arregloPalabras/arregloPalabras.html">Generar arreglo de palabras</option>
+    <option value="ejercicios/verificarClaves.html">Verificar claves</option>
+    <option value="ejercicios/contadorSimple.html">Contador Simple</option>
+    <option value="ejercicios/numPrimos/numPrimos.html">Números primos</option>
+    <option value="ejercicios/fibonacci/fibonacci.html">Serie de Fibonacci</option>
+    <option value="ejercicios/tablasMultiplicar/tablaMultiplicar.html">Tablas de multiplicar</option>
+    <option value="ejercicios/sumaPares/sumaPares.html">Sumar los números pares</option>
+</select>
+
+<!-- <script>
+  function redirigir() {
+      var select = document.getElementById("miSelect");
+      var url = select.value;
+      if (url) {
+          window.location.href = url; // Redirige a la URL seleccionada
+      }
+  }
+</script> -->
+
+<script>
+  function redirigir(event) {
+      var select = event.target.value;
+      var url = select;
+      if (url) {
+          window.location.href = url; // Redirige a la URL seleccionada
+      }
+  }
+</script>
+
+
+
+
+  </div>
+  <div class="caja footer">
+
+   
+
+    <a class="icon" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a class="icon" href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a class="icon" href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a class="icon" href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-facebook-messenger"></i></a>
+        <a class="icon" href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a class="icon" href="https://discord.com/" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        <a class="icon" href="https://www.youtube.com/?app=desktop&hl=" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a class="icon" href="https://www.tiktok.com/explore?lang=es" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+        <a class="icon" href="https://www.apple.com/co/business/enterprise/
+        " target="_blank"><i class="fa-brands fa-apple"></i></a>
+        <a class="icon" href="https://about.google/
+        " target="_blank"><i class="fa-brands fa-google"></i></a>
+
+    
+    </div>
+  
+
+
+</div>
+</body>
+</html>

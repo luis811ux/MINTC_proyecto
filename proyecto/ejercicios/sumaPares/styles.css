@@ -1,0 +1,19 @@
+#tablaN {
+  width: 30%;
+  margin: 20px auto;
+}
+
+#tablaN td {
+  padding: 10px;  
+  text-align: center;
+  border: 1px solid black;
+  background-color: lightblue;
+}
+
+
+#tablaN th {
+  background-color: lightgoldenrodyellow;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}

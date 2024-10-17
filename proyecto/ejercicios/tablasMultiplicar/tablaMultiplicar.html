@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+  <label for="multiplicando">Ingrese el numero de la tabla de multplicaion: </label>
+  <input type="number" id="multiplicando" placeholder="Numero 1"  required>
+  <br><br>
+  <label for="multiplicandor">Hasta que numero desea multiplicar: </label>
+  <input type="number" id="multiplicandor" placeholder="Numero 2"  required>
+  <br><br>
+  <input type="button" onclick="multiplicacion()" value="Multiplicar">
+  <br><br>
+  <p id="resultado"></p>
+  <br><br>
+      <button type="button"  onclick ="regresar()"> Regresar </button>
+  </form>
+
+  <script>
+    function multiplicacion() {
+      let num1, num2, resultado, tabla
+      
+      num1 = parseFloat(document.getElementById ("multiplicando").value);
+      num2 = parseFloat(document.getElementById ("multiplicandor").value);
+
+      tabla=`<table id= "tablaM" border="1"><tr><th>Multiplicando</th><th>Multiplicador</th><th>Resultado</th></tr>`
+      for (let i = 1; i <= num2; i++) {
+        
+
+        resultado=num1*i;
+        tabla += `<tr><td>${num1}</td><td>${i}</td><td>${resultado}</td></tr>`;
+
+      }
+      tabla += `</table>`;
+
+
+      document.getElementById("resultado").innerHTML= tabla
+      
+    }
+
+    function regresar() {
+        window.location.href="../../index.html"
+        
+      }
+  </script>
+  
+
+
+  
+
+</body>
+</html>

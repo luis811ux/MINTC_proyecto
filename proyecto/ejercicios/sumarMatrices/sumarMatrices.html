@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Matrices Cuadradas</title>
+<link rel="stylesheet" type="text/css" href="styles.css"> <!-- Vincula tu archivo CSS aquí -->
+</head>
+<body>
+<div id="contenedor">
+<div id="cabecera">
+<h3>Introduce el tamaño de las matrices (N):</h3>
+<form>
+<input type="number" id="tamano" min="1" required><br><br>
+<input type="button" onClick="cargarTamano()" value="Cargar Matrices">
+</form>
+<p id="longitud"></p> <!-- Añadido para mostrar el tamaño de las matrices -->
+</div>
+<div id="columna1">
+<h3>Inputs X</h3>
+
+<!-- muestra el formulario para ingresar los valores por el usuario -->
+<div id="matrizX"></div> 
+<br>
+<h3>Mostrar Matriz X</h3>
+<!-- muestra la matriz X con los datos ingresados por el usuario -->
+<div id="resultadoX"></div>
+</div>
+<div id="columna2">
+<h3>Inputs Y</h3>
+<div id="matrizY"></div>
+<br>
+<h3>Mostrar Matriz Y</h3>
+<div id="resultadoY"></div>
+</div>
+<div id="columna3">
+<h3>Matriz Z (Suma de X y Y)</h3>
+<div id="resultadoZ"></div>
+<h3>Matriz Z (Resta de X y Y)</h3>
+<div id="resultadoZ2"></div>
+
+<!-- muestra la suma de las matrices X y Y con el onClick="mostrarMatrices()" -->
+<button id="button" onClick="mostrarMatrices()">Mostrar Matrices</button>
+<button id="button" type="button"  onclick ="regresar()"> Regresar </button>
+</div>
+
+</div>
+
+
+<script src="sumarmatriz.js"></script> <!-- Añade esta línea para incluir tu archivo JS -->
+</body>
+</html>
+
+<!-- solo hay 2 botones uno para cargar los formularios de las matrices y otro que: genera, carga, imprime las matrices X y Y, y que genera, carga, suma e imprime las matrices X y Y =Z -->

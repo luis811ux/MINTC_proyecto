@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscaminas Simple</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #999;
+            text-align: center;
+            cursor: pointer;
+        }
+        .mined {
+            background-color: red;
+        }
+        .revealed {
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Buscaminas Simple</h1>
+    <table id="tablero"></table>
+    <script src="buscaMinas.js"></script>
+    <div id="resultado"></div>
+</body>
+</html>

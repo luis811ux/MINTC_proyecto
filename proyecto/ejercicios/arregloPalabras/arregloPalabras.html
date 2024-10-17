@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Frases</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Frases</h1>
+       
+          <textarea id="palabrasInput" placeholder="Ingresa palabras separadas por comas"></textarea>
+        <button id="generarFrase">Generar Frase</button>
+        <h2>Frase Generada:</h2>
+        <p id="fraseGenerada"></p>
+        <br><br>
+        <button type="button"  onclick ="regresar()"> Regresar </button>
+     
+
+        
+        
+        
+        
+    </div>
+   
+<
+
+
+    <!-- <script src="script.js"></script> -->
+    <script>
+     document.getElementById('generarFrase').addEventListener('click', function() {
+    const palabrasInput = document.getElementById('palabrasInput').value;
+    const palabrasArray = palabrasInput.split(',').map(p => p.trim()).filter(p => p);
+    // "map" se refiere a la acción de "mapear" o "transformar" un conjunto de datos. método que permite crear un nuevo arreglo aplicando una función a cada elemento de un arreglo existente. split(','): Esta parte divide el string palabrasInput en un arreglo utilizando la coma (,) como delimitador. Por ejemplo, si palabrasInput es "perro, gato, pez", el resultado será ["perro", " gato", " pez"].
+    // map(...): Luego se utiliza el método .map() para recorrer cada elemento del arreglo resultante
+    // .map(p => p.trim()): cada elemento p (p =>)  es el parametro que se le pasa a la funcion: p.trim(), gracias al metodo de escaneo de arreglos .map, para que tome cada elemento p y le aplica el método trim(), que elimina los espacios en blanco al principio y al final de la cadena. Entonces, " gato" se convierte en "gato" y " pez" en "pez". El resultado de esta operación es un nuevo arreglo: ["perro", "gato", "pez"]. El arreglo origini al que escanea .map es el optenido de palabrasInput.split(',')
+    //.filter(p => p): filter(...): Este método se utiliza para filtrar los elementos del arreglo.
+// p => p: Esta función verifica si cada elemento p es "truthy" (es decir, no es null, undefined, false, 0, NaN o una cadena vacía). Esto elimina cualquier entrada vacía del arreglo. Si, por ejemplo, se hubiera ingresado una cadena como "perro, , gato", el resultado final sería ["perro", "gato"], ya que el espacio vacío sería eliminado. 
+// Resultado Final
+// Al final, palabrasArray contendrá un arreglo de palabras limpias, sin espacios innecesarios y sin entradas vacías. Siguiendo el ejemplo anterior, el resultado final sería:
+// ["perro", "gato", "pez"]
+// Esta línea de código es útil para procesar una entrada de texto donde se espera que las palabras estén separadas por comas (pero el usurario puede que ingrese espacios y valores vacios) y que se quiera obtener un arreglo limpio de palabras.
+    
+    
+    if (palabrasArray.length > 0) {
+        const fraseAleatoria = generarFraseAleatoria(palabrasArray);
+        document.getElementById('fraseGenerada').textContent = fraseAleatoria;
+        //fraseAleatoria trae un arreglo de texto con el return de la funcion generarFraseAleatoria , por eso con textContent voy a imprimir donde esta el parrafo con ID: fraseGenerada
+    } else {
+        document.getElementById('fraseGenerada').textContent = 'Por favor, ingresa algunas palabras.';
+    }
+});
+
+function generarFraseAleatoria(palabras) {
+  const cantidadPalabras = Math.floor(Math.random() * (palabras.length-1))+1;//Esto permite seleccionar un número aleatorio entre 1 y palabras.length palabras del arreglo. COn el fin de seleccionar el numero de palabras del arreglo "const seleccionadas = [];"
+    // const cantidadPalabras = palabras.length
+  
+    const seleccionadas = [];
+    for (let i = 0; i < cantidadPalabras; i++) {
+        const indice = Math.floor(Math.random() * palabras.length);//Para seleccionar de forma aleatoria los indices del arreglo original
+        seleccionadas.push(palabras[indice]);
+    }
+    return seleccionadas.join(' ') + '.';
+}
+
+function regresar() {
+        window.location.href="../../index.html"
+        
+      }
+
+    </script>
+
+   
+
+</body>
+</html>

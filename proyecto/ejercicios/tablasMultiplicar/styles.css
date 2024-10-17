@@ -1,0 +1,19 @@
+#tablaM {
+  width: 50%;
+  margin: 20px auto;
+}
+
+#tablaM td {
+  padding: 10px;  
+  text-align: center;
+  border: 1px solid black;
+  background-color: lightblue;
+}
+
+
+#tablaM th {
+  background-color: lightgoldenrodyellow;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
